@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temples</title>
+</head>
+
+<body>
+<h1>Temples</h1>
+<table>
+<thead>
+<tr>
+<th>Temple Name</th>
+<th>Location</th>
+<th>Deities Worshipped</th>
+</tr>
+</thead>
+<tbody>
+{% for temple in temples %}
+<tr>
+<td><a href="{{ url_for('temple', temple_name=temple.name) }}">{{ temple.name }}</a></td>
+<td>{{ temple.location}}</td>
+<td>{{ temple.deities_worshipped }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<br>
+<a href="{{ url_for('add_temple') }}">Add a new temple</a>
+</body>
+
+</html>
+
