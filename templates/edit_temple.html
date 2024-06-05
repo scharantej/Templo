@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit {{ temple.name }}</title>
+</head>
+
+<body>
+<h1>Edit {{ temple.name }}</h1>
+<form method="POST">
+<label for="name">Temple Name:</label>
+<input type="text" id="name" name="name" value="{{ temple.name }}" required>
+<br>
+<label for="location">Location:</label>
+<input type="text" id="location" name="location" value="{{ temple.location }}" required>
+<br>
+<label for="deities_worshipped">Deities Worshipped:</label>
+<input type="text" id="deities_worshipped" name="deities_worshipped" value="{{ temple.deities_worshipped }}" required>
+<br>
+<label for="history">History:</label>
+<textarea id="history" name="history" rows="4" cols="50">{{ temple.history }}</textarea>
+<br>
+<label for="architecture">Architecture:</label>
+<textarea id="architecture" name="architecture" rows="4" cols="50">{{ temple.architecture }}</textarea>
+<br>
+<label for="current_status">Current Status:</label>
+<input type="text" id="current_status" name="current_status" value="{{ temple.current_status }}" required>
+<br>
+<label for="image_url">Image URL:</label>
+<input type="text" id="image_url" name="image_url" value="{{ temple.image_url }}">
+<br>
+<input type="submit" value="Update Temple">
+</form>
+</body>
+</html>
+
